@@ -4,6 +4,7 @@ import 'package:project_management_app/src/core/utils/app_dimensions.dart';
 import 'package:project_management_app/src/core/utils/image_constant.dart';
 import 'package:project_management_app/src/core/utils/size_utils.dart';
 import 'package:project_management_app/src/presentation/home/model/home_container_model.dart';
+import 'package:project_management_app/src/presentation/home/widgets/add_task_widget.dart';
 import 'package:project_management_app/src/presentation/home/widgets/home_container.dart';
 import 'package:project_management_app/src/widgets/app_bar/custom_app_bar.dart';
 import 'package:project_management_app/src/widgets/custom_icon_button.dart';
@@ -105,9 +106,29 @@ class HomeScreen extends StatelessWidget {
           Container(
             color: Color(0XFFF8F8F8),
             width: MediaQuery.sizeOf(context).width,
-            height: 300,
-            child: Text('Hello'),
-          )
+            child: Column(
+              children: [
+                Text('Hello'),
+                Padding(
+                  padding: getPadding(top: 13),
+                  child: ListView.separated(
+                    physics: const BouncingScrollPhysics(),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: AppDimensions.medium),
+                    shrinkWrap: true,
+                    separatorBuilder: (context, index) {
+                      return SizedBox(height: 8);
+                    },
+                    itemCount: 4,
+                    itemBuilder: (context, index) {
+                      return AddTaskWidget();
+                    },
+                  ),
+                ),
+                const Spacing.mediumHeight()
+              ],
+            ),
+          ),
         ],
       ),
     );
