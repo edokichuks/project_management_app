@@ -1,6 +1,11 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_management_app/src/core/utils/app_dimensions.dart';
+import 'package:project_management_app/src/presentation/home/home.dart';
+import 'package:project_management_app/src/presentation/todo_screen.dart';
+import 'package:project_management_app/src/widgets/custom_image_view.dart';
+
+import '../../core/app_export.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -18,24 +23,24 @@ class _DashboardState extends State<Dashboard> {
       body: IndexedStack(
         index: _currentIndex,
         children: const [
+          HomeScreen(),
           Center(
-            child: Text('Home'),
+            child: Text('Task'),
           ),
-          Center(
-            child: Text('Checkmark'),
-          ),
-          Center(
-            child: Text('Profile'),
-          ),
+          TodoScreen(),
         ],
       ),
-      floatingActionButton: _currentIndex == 0?FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(
-          CupertinoIcons.plus,
-          size: 40,
-        ),
-      ): null,
+      floatingActionButton: _currentIndex == 0
+          ? FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: theme.colorScheme.onError,
+              child: const Icon(
+                CupertinoIcons.plus,
+                color: Colors.white,
+                size: 40,
+              ),
+            )
+          : null,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: CustomNavigationBar(
         currentIndex: _currentIndex,
@@ -44,19 +49,41 @@ class _DashboardState extends State<Dashboard> {
             _currentIndex = index;
           });
         },
-        items: const [
-          CustomNavigationBarItem(
-            tooltipText: '',
-            icon: Icon(Icons.home),
+        items: [
+          const CustomNavigationBarItem(
+            tooltipText: 'Home',
+            icon: Icon(
+              Icons.home_outlined,
+              size: AppDimensions.large,
+            ),
+            activeIcon: Icon(
+              Icons.home,
+              size: AppDimensions.large,
+            ),
           ),
           CustomNavigationBarItem(
-            tooltipText: '',
-            icon: Icon(Icons.check),
-          ),
+              tooltipText: 'Task',
+              icon: CustomImageView(
+                svgPath: 'assets/images/svg/unselected_check.svg',
+                height: AppDimensions.big,
+                width: AppDimensions.big,
+              ),
+              activeIcon: CustomImageView(
+                svgPath: 'assets/images/svg/selected_check.svg',
+                height: AppDimensions.big,
+                width: AppDimensions.big,
+              )),
           CustomNavigationBarItem(
-            tooltipText: '',
-            icon: Icon(Icons.person),
-          ),
+              tooltipText: 'Profile',
+              activeIcon: const Icon(
+                Icons.person,
+                size: AppDimensions.large,
+              ),
+              icon: CustomImageView(
+                height: AppDimensions.big,
+                width: AppDimensions.big,
+                imagePath: 'assets/images/png/person.png',
+              )),
         ],
       ),
     );
@@ -89,10 +116,10 @@ class CustomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      height: 75,
+      height: 72,
       shape: const CircularNotchedRectangle(),
       notchMargin: 5,
-      color: Colors.white,
+      color: appTheme.blueGray50, //Colors.white,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 8),
         child: Row(
@@ -158,7 +185,7 @@ class _Tile extends StatelessWidget {
     return Tooltip(
       message: tooltipText,
       child: Padding(
-        padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8, top: 18),
+        padding: const EdgeInsets.only(left: 4, right: 4, bottom: 4, top: 8),
         child: isActive ? activeIcon ?? icon : icon,
       ),
     );
