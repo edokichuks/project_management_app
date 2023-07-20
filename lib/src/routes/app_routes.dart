@@ -48,7 +48,7 @@ class AppRoutes {
         );
       case kAddTaskScreen:
         return CupertinoPageRoute(
-          builder: (context) => const AddTaskScreen(),
+          builder: (context) =>  AddTaskScreen(),
         );
       default:
         throw UnimplementedError('Route not found');

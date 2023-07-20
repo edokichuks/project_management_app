@@ -4,8 +4,9 @@ import 'package:project_management_app/src/general_widgets/general_widgets_expor
 
 class NameInput extends StatelessWidget {
   const NameInput({
-    super.key,
+    super.key, required this.hintText,
   });
+  final String hintText;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class NameInput extends StatelessWidget {
           margin: getMargin(right: 17),
           contentPadding: getPadding(right: 22),
           textStyle: TextThemeHelper.labelLargeGray800,
-          hintText: "Project name",
+          hintText: hintText,
           hintStyle: TextThemeHelper.labelLargeGray800,
           defaultBorderDecoration:
               TextFormFieldStyleHelper.underLineOnPrimaryContainer,

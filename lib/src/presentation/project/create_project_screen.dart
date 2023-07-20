@@ -45,13 +45,17 @@ class CreateProjectScreen extends HookConsumerWidget {
                             context: context,
                             imageList: images,
                             type: ImageType.single),
-                        imagePath: ImageConstant.imgEllipse546,
-                        // file: images.value.isEmpty ?null:  images.value.last,
+                        imagePath: images.value.isEmpty
+                            ? ImageConstant.imgEllipse546
+                            : null,
+                        file: images.value.isEmpty ? null : images.value.last,
                         height: getSize(52),
                         width: getSize(52),
                         radius: BorderRadius.circular(getHorizontalSize(26))),
                     const Spacing.mediumWidth(),
-                    const NameInput()
+                    const NameInput(
+                      hintText: 'Project Name',
+                    )
                   ])),
               const Spacing.height(49),
               Row(
