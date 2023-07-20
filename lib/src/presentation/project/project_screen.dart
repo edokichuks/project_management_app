@@ -1,18 +1,14 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/presentation/home/widgets/add_task_widget.dart';
+import 'package:project_management_app/src/presentation/project/widgets/projects_widget.dart';
 import 'package:project_management_app/src/widgets/back_button.dart';
 import 'package:project_management_app/src/widgets/spacing.dart';
 
 class ProjectScreen extends StatelessWidget {
   ProjectScreen({super.key});
-  List<double> rand = [];
 
   @override
   Widget build(BuildContext context) {
-    getrandNum();
     return Scaffold(
       backgroundColor: appTheme.gray5002,
       body: SafeArea(
@@ -44,8 +40,7 @@ class ProjectScreen extends StatelessWidget {
                 },
                 itemCount: 6,
                 itemBuilder: (context, index) {
-                  final randomProgress = rand[index];
-                  return AddTaskWidget(progress: randomProgress);
+                  return ProjectsWidget();
                 },
               ),
             ),
@@ -54,12 +49,5 @@ class ProjectScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void getrandNum() {
-    for (int x = 0; x < 6; x++) {
-      double random = Random().nextDouble() * 100;
-      rand.add(random);
-    }
   }
 }
