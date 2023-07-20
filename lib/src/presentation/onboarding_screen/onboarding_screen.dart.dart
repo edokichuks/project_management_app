@@ -4,11 +4,11 @@ import 'package:project_management_app/src/core/utils/image_constant.dart';
 import 'package:project_management_app/src/core/utils/size_utils.dart';
 import 'package:project_management_app/src/presentation/onboarding_screen/widgets/stacked_images.dart';
 import 'package:project_management_app/src/routes/app_routes.dart';
-import 'package:project_management_app/src/widgets/app_logo.dart';
-import 'package:project_management_app/src/widgets/custom_elevated_button.dart';
-import 'package:project_management_app/src/widgets/custom_icon_button.dart';
-import 'package:project_management_app/src/widgets/custom_image_view.dart';
-import 'package:project_management_app/src/widgets/spacing.dart';
+import 'package:project_management_app/src/general_widgets/app_logo.dart';
+import 'package:project_management_app/src/general_widgets/custom_elevated_button.dart';
+import 'package:project_management_app/src/general_widgets/custom_icon_button.dart';
+import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
+import 'package:project_management_app/src/general_widgets/spacing.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({Key? key})

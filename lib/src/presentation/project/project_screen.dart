@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:project_management_app/src/core/app_export.dart';
 import 'package:project_management_app/src/presentation/project/widgets/projects_widget.dart';
-import 'package:project_management_app/src/widgets/back_button.dart';
-import 'package:project_management_app/src/widgets/general_widgets_exports.dart';
-import 'package:project_management_app/src/widgets/spacing.dart';
+import 'package:project_management_app/src/general_widgets/back_button.dart';
+import 'package:project_management_app/src/general_widgets/general_widgets_exports.dart';
+import 'package:project_management_app/src/general_widgets/spacing.dart';
 
 class ProjectScreen extends StatelessWidget {
   ProjectScreen({super.key});

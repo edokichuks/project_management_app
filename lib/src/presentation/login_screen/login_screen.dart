@@ -3,13 +3,13 @@ import 'package:project_management_app/src/core/app_export.dart';
 import 'package:project_management_app/src/core/utils/image_constant.dart';
 import 'package:project_management_app/src/core/utils/size_utils.dart';
 import 'package:project_management_app/src/routes/app_routes.dart';
-import 'package:project_management_app/src/widgets/app_logo.dart';
-import 'package:project_management_app/src/widgets/back_button.dart';
-import 'package:project_management_app/src/widgets/custom_elevated_button.dart';
-import 'package:project_management_app/src/widgets/custom_icon_button.dart';
-import 'package:project_management_app/src/widgets/custom_image_view.dart';
-import 'package:project_management_app/src/widgets/custom_text_form_field.dart';
-import 'package:project_management_app/src/widgets/spacing.dart';
+import 'package:project_management_app/src/general_widgets/app_logo.dart';
+import 'package:project_management_app/src/general_widgets/back_button.dart';
+import 'package:project_management_app/src/general_widgets/custom_elevated_button.dart';
+import 'package:project_management_app/src/general_widgets/custom_icon_button.dart';
+import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
+import 'package:project_management_app/src/general_widgets/custom_text_form_field.dart';
+import 'package:project_management_app/src/general_widgets/spacing.dart';
 
 // ignore_for_file: must_be_immutable
 class LoginScreen extends StatelessWidget {

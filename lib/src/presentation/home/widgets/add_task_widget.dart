@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:project_management_app/src/core/utils/image_constant.dart';
 import 'package:project_management_app/src/core/utils/size_utils.dart';
 import 'package:project_management_app/src/theme/app_decoration.dart';
-import 'package:project_management_app/src/widgets/custom_image_view.dart';
-import 'package:project_management_app/src/widgets/custom_painters/progess.dart';
+import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
+import 'package:project_management_app/src/general_widgets/custom_painters/progess.dart';
 
 import '../../../theme/text_theme_helper.dart';
 import '../../../theme/theme_helper.dart';

@@ -5,11 +5,11 @@ import 'package:project_management_app/src/core/app_export.dart';
 import 'package:project_management_app/src/presentation/home/model/home_container_model.dart';
 import 'package:project_management_app/src/presentation/home/widgets/add_task_widget.dart';
 import 'package:project_management_app/src/presentation/home/widgets/home_container.dart';
-import 'package:project_management_app/src/widgets/app_bar/custom_app_bar.dart';
-import 'package:project_management_app/src/widgets/custom_icon_button.dart';
-import 'package:project_management_app/src/widgets/custom_image_view.dart';
+import 'package:project_management_app/src/general_widgets/app_bar/custom_app_bar.dart';
+import 'package:project_management_app/src/general_widgets/custom_icon_button.dart';
+import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
 
-import 'package:project_management_app/src/widgets/spacing.dart';
+import 'package:project_management_app/src/general_widgets/spacing.dart';
 
 class HomeScreen extends StatelessWidget {
    HomeScreen({super.key});

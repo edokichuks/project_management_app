@@ -3,8 +3,8 @@ import 'package:project_management_app/src/core/app_export.dart';
 import 'package:project_management_app/src/core/utils/image_constant.dart';
 import 'package:project_management_app/src/core/utils/size_utils.dart';
 import 'package:project_management_app/src/theme/app_decoration.dart';
-import 'package:project_management_app/src/widgets/custom_icon_button.dart';
-import 'package:project_management_app/src/widgets/custom_image_view.dart';
+import 'package:project_management_app/src/general_widgets/custom_icon_button.dart';
+import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
 
 class ImageStack extends StatelessWidget {
   const ImageStack({

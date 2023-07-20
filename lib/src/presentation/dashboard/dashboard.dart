@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_management_app/src/presentation/home/home.dart';
 import 'package:project_management_app/src/presentation/todo_screen.dart';
-import 'package:project_management_app/src/widgets/custom_image_view.dart';
+import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
 import 'package:project_management_app/src/routes/routes_exports.dart';
 import '../../core/app_export.dart';
 

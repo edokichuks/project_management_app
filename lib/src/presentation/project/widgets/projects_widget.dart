@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/app_export.dart';
-import '../../../widgets/general_widgets_exports.dart';
+import '../../../general_widgets/general_widgets_exports.dart';
 
 // ignore: must_be_immutable
 class ProjectsWidget extends StatelessWidget {

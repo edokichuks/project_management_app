@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 
-class ForraImagePicker {
+class AppImagePicker {
   Future<void> pickImage({
     required ImageSource source,
     required ValueNotifier<List<File>> images,
@@ -38,4 +38,4 @@ class ForraImagePicker {
   }
 }
 
-final imagePickerService = Provider((_) => ForraImagePicker());
+final imagePickerService = Provider((_) => AppImagePicker());
