@@ -38,7 +38,7 @@ App Library Dependence
 
 #### App Appetize link
 
-- [Appetize link ](https://appetize.io/app/bbcljoefku3xxa63i6dkgb2xku?device=pixel4&osVersion=11.0&scale=75)
+- [Appetize link ](https://appetize.io/app/vqfbzn4zf25szwnc2wzmbttuz4?device=pixel4&osVersion=11.0&scale=75)
 
 ##### Short video clip
 
