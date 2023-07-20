@@ -10,21 +10,19 @@ class NameInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: CustomTextFormField(
-          margin: getMargin(right: 17),
-          contentPadding: getPadding(right: 22),
-          textStyle: TextThemeHelper.labelLargeGray800,
-          hintText: hintText,
-          hintStyle: TextThemeHelper.labelLargeGray800,
-          defaultBorderDecoration:
-              TextFormFieldStyleHelper.underLineOnPrimaryContainer,
-          enabledBorderDecoration:
-              TextFormFieldStyleHelper.underLineOnPrimaryContainer,
-          focusedBorderDecoration:
-              TextFormFieldStyleHelper.underLineOnPrimaryContainer,
-          disabledBorderDecoration:
-              TextFormFieldStyleHelper.underLineOnPrimaryContainer),
-    );
+    return CustomTextFormField(
+        margin: getMargin(right: 17),
+        contentPadding: getPadding(right: 22),
+        textStyle: TextThemeHelper.labelLargeGray800,
+        hintText: hintText,
+        hintStyle: TextThemeHelper.labelLargeGray800,
+        defaultBorderDecoration:
+            TextFormFieldStyleHelper.underLineOnPrimaryContainer,
+        enabledBorderDecoration:
+            TextFormFieldStyleHelper.underLineOnPrimaryContainer,
+        focusedBorderDecoration:
+            TextFormFieldStyleHelper.underLineOnPrimaryContainer,
+        disabledBorderDecoration:
+            TextFormFieldStyleHelper.underLineOnPrimaryContainer);
   }
 }

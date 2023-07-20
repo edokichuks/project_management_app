@@ -85,7 +85,7 @@ class EditTaskScreen extends HookConsumerWidget {
                       textAlign: TextAlign.left,
                       style: theme.textTheme.labelLarge)),
               const Spacing.smallHeight(),
-              CustomTextFormField(
+              const CustomTextFormField(
                 maxLines: 4,
                 
               ),

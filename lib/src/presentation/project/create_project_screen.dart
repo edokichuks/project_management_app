@@ -52,8 +52,10 @@ class CreateProjectScreen extends HookConsumerWidget {
                         width: getSize(52),
                         radius: BorderRadius.circular(getHorizontalSize(26))),
                     const Spacing.mediumWidth(),
-                    const NameInput(
-                      hintText: 'Project Name',
+                    Expanded(
+                      child: const NameInput(
+                        hintText: 'Project Name',
+                      ),
                     )
                   ])),
               const Spacing.height(49),

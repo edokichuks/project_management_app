@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/core/utils/image_constant.dart';
-import 'package:project_management_app/src/core/utils/size_utils.dart';
-import 'package:project_management_app/src/routes/app_routes.dart';
+import 'package:project_management_app/src/core/services/third_party_services/local_auth_finger.dart';
+import 'package:project_management_app/src/core/utils/snackbar.dart';
 import 'package:project_management_app/src/general_widgets/app_logo.dart';
 import 'package:project_management_app/src/general_widgets/back_button.dart';
 import 'package:project_management_app/src/general_widgets/custom_elevated_button.dart';
@@ -12,14 +11,21 @@ import 'package:project_management_app/src/general_widgets/custom_text_form_fiel
 import 'package:project_management_app/src/general_widgets/spacing.dart';
 
 // ignore_for_file: must_be_immutable
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailController = TextEditingController();
 
   TextEditingController passwordController = TextEditingController();
 
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  bool authenticated = false;
 
   @override
   Widget build(BuildContext context) {
@@ -88,9 +94,10 @@ class LoginScreen extends StatelessWidget {
                           flex: 6,
                           child: CustomElevatedButton(
                               text: "Sign in",
-                               onTap: () => Navigator.pushNamed(
-                                  context, AppRoutes.kDashboard),
-
+                              onTap: (){ 
+                            
+                                Navigator.pushNamed(
+                                  context, AppRoutes.kDashboard);},
                               margin: const EdgeInsets.only(top: 1),
                               buttonStyle: ButtonThemeHelper.fillPrimary
                                   .copyWith(
@@ -105,6 +112,19 @@ class LoginScreen extends StatelessWidget {
                           child: CustomIconButton(
                               height: 56,
                               width: 54,
+                              onTap: () async {
+                                final auth = await LocalAuth.authenticate();
+
+                                setState(() {
+                                  authenticated = auth;
+                                });
+                                  if (authenticated) {
+                                  toastMessage(
+                                      'Authenticated With Fingerprint');
+                                  Navigator.pushNamed(
+                                      context, AppRoutes.kDashboard);
+                                }
+                              },
                               margin: getMargin(left: 16, bottom: 1),
                               padding: getPadding(all: 11),
                               decoration: IconButtonStyleHelper.outlineOnError,
