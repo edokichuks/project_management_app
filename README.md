@@ -42,6 +42,8 @@ App Library Dependence
 
 ##### Short video clip
 
+https://github.com/edokichuks/project_management_app/assets/92238247/0e7a54b5-4147-4f06-9ce5-9e1a64b29159
+
 
 
 
