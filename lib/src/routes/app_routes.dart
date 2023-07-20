@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:project_management_app/src/presentation/task/pages/add_task_screen.dart';
 import 'package:project_management_app/src/routes/routes_exports.dart';
 
 class AppRoutes {
@@ -9,6 +10,7 @@ class AppRoutes {
   static const kLoginScreen = 'login_screen';
   static const kDashboard = 'dashboard_screen';
   static const kTaskScreen = 'task_screen';
+  static const kAddTaskScreen = 'add_task_screen';
   static const kProjectScreen = 'project_screen';
   static const kCreateProjectScreen = 'create_project_screen';
 
@@ -43,6 +45,10 @@ class AppRoutes {
       case kProjectScreen:
         return CupertinoPageRoute(
           builder: (context) => ProjectScreen(),
+        );
+      case kAddTaskScreen:
+        return CupertinoPageRoute(
+          builder: (context) => const AddTaskScreen(),
         );
       default:
         throw UnimplementedError('Route not found');

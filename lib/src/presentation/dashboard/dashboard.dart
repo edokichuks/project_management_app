@@ -21,15 +21,16 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
-        children:  [
-           HomeScreen(),
-       CreateProjectScreen(),
-         const TodoScreen(),
+        children: [
+          HomeScreen(),
+          ProjectScreen(),
+          const TodoScreen(),
         ],
       ),
       floatingActionButton: _currentIndex == 0
           ? FloatingActionButton(
-              onPressed: () {},
+              onPressed: () =>
+                  Navigator.pushNamed(context, AppRoutes.kCreateProjectScreen),
               backgroundColor: theme.colorScheme.onError,
               child: const Icon(
                 CupertinoIcons.plus,
@@ -157,7 +158,7 @@ class CustomNavigationBarItem {
   final Widget? activeIcon;
   final String tooltipText;
 }
-     
+
 class _Tile extends StatelessWidget {
   const _Tile({
     required this.icon,

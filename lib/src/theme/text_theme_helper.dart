@@ -33,7 +33,7 @@ class TextThemeHelper {
       );
   static get labelLargeGray800 => theme.textTheme.labelLarge!.copyWith(
         color: appTheme.gray800,
-        fontSize: 13,
+        fontSize: 14,
       );
   static get titleMediumOnErrorContainer =>
       theme.textTheme.titleMedium!.copyWith(

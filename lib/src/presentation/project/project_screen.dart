@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_management_app/src/core/app_export.dart';
 import 'package:project_management_app/src/presentation/project/widgets/projects_widget.dart';
 import 'package:project_management_app/src/widgets/back_button.dart';
+import 'package:project_management_app/src/widgets/general_widgets_exports.dart';
 import 'package:project_management_app/src/widgets/spacing.dart';
 
 class ProjectScreen extends StatelessWidget {
@@ -17,11 +18,37 @@ class ProjectScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: AppDimensions.medium),
           children: [
             const Spacing.mediumHeight(),
-            const Align(
-                alignment: Alignment.centerLeft, child: BackButtonWidget()),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: AppDimensions.small),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Align(
+                      alignment: Alignment.centerLeft,
+                      child: BackButtonWidget()),
+                  CustomOutlinedButton(
+                    text: "Create Project",
+                    onTap: () => Navigator.pushNamed(
+                        context, AppRoutes.kCreateProjectScreen),
+                    width: 100,
+                    buttonStyle: ButtonThemeHelper.outlineOnError.copyWith(
+                        fixedSize: MaterialStateProperty.all<Size>(Size(
+                      getHorizontalSize(
+                        100,
+                      ),
+                      getVerticalSize(
+                        24,
+                      ),
+                    ))),
+                    buttonTextStyle: TextThemeHelper.bodySmallOnError_1,
+                  ),
+                ],
+              ),
+            ),
             Padding(
               padding: getPadding(top: 11),
-              child: Text("Project",
+              child: Text("Projects",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: theme.textTheme.headlineSmall),
@@ -38,9 +65,9 @@ class ProjectScreen extends StatelessWidget {
                 separatorBuilder: (context, index) {
                   return const SizedBox(height: AppDimensions.medium);
                 },
-                itemCount: 6,
+                itemCount: 10,
                 itemBuilder: (context, index) {
-                  return ProjectsWidget();
+                  return const ProjectsWidget();
                 },
               ),
             ),

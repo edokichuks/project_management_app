@@ -4,6 +4,8 @@ import 'package:project_management_app/src/widgets/general_widgets_exports.dart'
 import 'package:project_management_app/src/core/app_export.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
+import 'widgets/project_divider.dart';
+
 class CreateProjectScreen extends HookConsumerWidget {
   CreateProjectScreen({Key? key}) : super(key: key);
 
@@ -34,38 +36,30 @@ class CreateProjectScreen extends HookConsumerWidget {
                       style: theme.textTheme.headlineSmall)),
               Padding(
                   padding: getPadding(left: 3, top: 17, right: 2),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CustomImageView(
-                            imagePath: ImageConstant.imgEllipse546,
-                            height: getSize(52),
-                            width: getSize(52),
-                            radius:
-                                BorderRadius.circular(getHorizontalSize(26))),
-                        Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Project Name",
-                                  overflow: TextOverflow.ellipsis,
-                                  textAlign: TextAlign.left,
-                                  style: theme.textTheme.labelLarge),
-                              Padding(
-                                  padding: getPadding(top: 10),
-                                  child: Text("Liberty Pay",
-                                      overflow: TextOverflow.ellipsis,
-                                      textAlign: TextAlign.left,
-                                      style: TextThemeHelper.titleSmallBold)),
-                              Padding(
-                                  padding: getPadding(top: 6),
-                                  child: Divider(
-                                      height: getVerticalSize(1),
-                                      thickness: getVerticalSize(1),
-                                      color: theme
-                                          .colorScheme.onPrimaryContainer
-                                          .withOpacity(1)))
-                            ])
-                      ])),
+                  child: Row(children: [
+                    CustomImageView(
+                        imagePath: ImageConstant.imgEllipse546,
+                        height: getSize(52),
+                        width: getSize(52),
+                        radius: BorderRadius.circular(getHorizontalSize(26))),
+                    const Spacing.mediumWidth(),
+                    Expanded(
+                      child: CustomTextFormField(
+                          margin: getMargin(right: 17),
+                          contentPadding: getPadding(right: 22),
+                          textStyle: TextThemeHelper.labelLargeGray800,
+                          hintText: "Project name",
+                          hintStyle: TextThemeHelper.labelLargeGray800,
+                          defaultBorderDecoration: TextFormFieldStyleHelper
+                              .underLineOnPrimaryContainer,
+                          enabledBorderDecoration: TextFormFieldStyleHelper
+                              .underLineOnPrimaryContainer,
+                          focusedBorderDecoration: TextFormFieldStyleHelper
+                              .underLineOnPrimaryContainer,
+                          disabledBorderDecoration: TextFormFieldStyleHelper
+                              .underLineOnPrimaryContainer),
+                    )
+                  ])),
               const Spacing.height(49),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -182,7 +176,8 @@ class CreateProjectScreen extends HookConsumerWidget {
                             width: getSize(20),
                             margin: getMargin(top: 4))
                       ])),
-              Padding(padding: getPadding(top: 10), child: const ProjectDivider()),
+              Padding(
+                  padding: getPadding(top: 10), child: const ProjectDivider()),
               Padding(
                   padding: getPadding(top: 33),
                   child: Text("Tags:",
@@ -253,7 +248,8 @@ class CreateProjectScreen extends HookConsumerWidget {
                                           TextThemeHelper.labelMediumOnError)))
                         ]))
                   ])),
-              Padding(padding: getPadding(top: 6), child: const ProjectDivider()),
+              Padding(
+                  padding: getPadding(top: 6), child: const ProjectDivider()),
               Padding(
                   padding: getPadding(left: 2, top: 27),
                   child: Text("Discription",
@@ -265,7 +261,8 @@ class CreateProjectScreen extends HookConsumerWidget {
               ),
               CustomElevatedButton(
                   text: "Create Project",
-                  onTap: () => Navigator.pushNamed(context, AppRoutes.kProjectScreen),
+                  onTap: () =>
+                      Navigator.pushNamed(context, AppRoutes.kProjectScreen),
                   margin: getMargin(left: 2, top: 19, bottom: 5),
                   buttonStyle: ButtonThemeHelper.fillPrimary.copyWith(
                       fixedSize: MaterialStateProperty.all<Size>(
@@ -274,20 +271,5 @@ class CreateProjectScreen extends HookConsumerWidget {
             ]),
       ),
     );
-  }
-}
-
-class ProjectDivider extends StatelessWidget {
-  const ProjectDivider({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Divider(
-        height: getVerticalSize(1),
-        thickness: getVerticalSize(1),
-        color: theme.colorScheme.onPrimaryContainer.withOpacity(1),
-        indent: getHorizontalSize(1));
   }
 }

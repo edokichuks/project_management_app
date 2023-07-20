@@ -63,7 +63,7 @@ class ProjectsWidget extends StatelessWidget {
                     style: theme.textTheme.titleSmall,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Container(
                   width: getHorizontalSize(
                     34,
@@ -154,6 +154,8 @@ class ProjectsWidget extends StatelessWidget {
                 ),
                 CustomOutlinedButton(
                   text: "Add Task",
+                  onTap: () =>
+                      Navigator.pushNamed(context, AppRoutes.kAddTaskScreen),
                   margin: getMargin(
                     top: 4,
                   ),
