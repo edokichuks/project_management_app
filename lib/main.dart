@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/routes/app_routes.dart';
 
-import 'src/presentation/onboarding_screen/onboarding_screen.dart.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +11,7 @@ void main() {
   // ]);
 
   ThemeHelper().changeTheme('primary');
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

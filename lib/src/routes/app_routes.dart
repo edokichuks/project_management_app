@@ -9,6 +9,7 @@ class AppRoutes {
   static const kLoginScreen = 'login_screen';
   static const kDashboard = 'dashboard_screen';
   static const kTaskScreen = 'task_screen';
+  static const kProjectScreen = 'project_screen';
   static const kCreateProjectScreen = 'create_project_screen';
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -38,6 +39,10 @@ class AppRoutes {
       case kTaskScreen:
         return CupertinoPageRoute(
           builder: (context) => TaskScreen(),
+        );
+      case kProjectScreen:
+        return CupertinoPageRoute(
+          builder: (context) => ProjectScreen(),
         );
       default:
         throw UnimplementedError('Route not found');
