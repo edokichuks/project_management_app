@@ -34,7 +34,7 @@ App Library Dependence
 
 #### App APK Link
 
-- [DO-IT](https://drive.google.com/file/d/1rijHa96TzkP9nVJpWvY6DINNkFrVKe3g/view?usp=drivesdk)
+- [DO-IT](https://drive.google.com/file/d/1pcmpr1wpSa3DwHXMDpyCDNYzqvXhDeDz/view?usp=drivesdk)
 
 #### App Appetize link
 
