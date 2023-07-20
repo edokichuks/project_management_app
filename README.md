@@ -25,21 +25,16 @@ App Library Dependence
 
 > image_pciker
 
-- [Flutter plugin for launching a URL. ](https://pub.dev/packages/url_launcher)
+- [A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures with the camera.]([https://pub.dev/packages/url_launcher](https://pub.dev/packages/image_picker))
 
 > local_auth
 
-- [Flutter plugin for launching a URL. ](https://pub.dev/packages/url_launcher)
-
+- [This Flutter plugin provides means to perform local, on-device authentication of the user.]([https://pub.dev/packages/url_launcher](https://pub.dev/packages/local_auth))
+...
 
 #### App APK Link
 
 - [DO-IT](https://drive.google.com/file/d/1rijHa96TzkP9nVJpWvY6DINNkFrVKe3g/view?usp=drivesdk)
-
-Challenges Faced
-
-> Deployment of the app to - [Appetizer.io ](https://appetize.io/) : Solved by deploying the debug version of the app
-
 
 #### App Appetize link
 
