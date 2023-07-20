@@ -22,7 +22,7 @@ class _DashboardState extends State<Dashboard> {
       body: IndexedStack(
         index: _currentIndex,
         children:  [
-          const HomeScreen(),
+           HomeScreen(),
        CreateProjectScreen(),
          const TodoScreen(),
         ],

@@ -21,7 +21,7 @@ class _ProgressState extends State<Progress>
     super.initState();
 
     _animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 2));
+        AnimationController(vsync: this, duration: const Duration(seconds: 3));
 
     _animation = Tween<double>(begin: 0, end: widget.progress)
         .chain(CurveTween(curve: Curves.fastOutSlowIn))
@@ -78,14 +78,14 @@ class CircularProgressPaint extends CustomPainter {
     final radius = size.width / 2.5;
     final paint = Paint()
       ..color = const Color(0XFFD6FFAE)
-      ..strokeWidth = 5
+      ..strokeWidth = 4
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
     final arcpaint = Paint()
       ..shader = const LinearGradient(
         colors: [Color(0XFF59B200), Color(0XFF59B200), Color(0XFF59B200)],
       ).createShader(const Rect.fromLTWH(40, 100, 300, 100))
-      ..strokeWidth = 5
+      ..strokeWidth = 4
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.square;
     const startAngle = -math.pi / 2;

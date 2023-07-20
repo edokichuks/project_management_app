@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:project_management_app/src/core/app_export.dart';
 import 'package:project_management_app/src/presentation/home/model/home_container_model.dart';
@@ -10,10 +12,12 @@ import 'package:project_management_app/src/widgets/custom_image_view.dart';
 import 'package:project_management_app/src/widgets/spacing.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+   HomeScreen({super.key});
 
+List<double> rand = [];
   @override
   Widget build(BuildContext context) {
+    getrandNum();
     final isLandScape =
         MediaQuery.orientationOf(context) == Orientation.landscape;
     return Scaffold(
@@ -147,9 +151,10 @@ class HomeScreen extends StatelessWidget {
                     separatorBuilder: (context, index) {
                       return const SizedBox(height: AppDimensions.medium);
                     },
-                    itemCount: 4,
+                    itemCount: 6,
                     itemBuilder: (context, index) {
-                      return const AddTaskWidget();
+                      final randomProgress = rand[index];
+                      return  AddTaskWidget(progress: randomProgress ,);
                     },
                   ),
                 ),
@@ -160,5 +165,11 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+    void getrandNum() {
+    for (int x = 0; x < 6; x++) {
+      double random = Random().nextDouble() * 100;
+      rand.add(random);
+    }
   }
 }

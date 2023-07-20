@@ -10,10 +10,11 @@ import '../../../theme/theme_helper.dart';
 
 // ignore: must_be_immutable
 class AddTaskWidget extends StatelessWidget {
-  const AddTaskWidget({Key? key})
+  const AddTaskWidget({Key? key, required this.progress})
       : super(
           key: key,
         );
+  final double progress;
 
   @override
   Widget build(BuildContext context) {
@@ -160,12 +161,11 @@ class AddTaskWidget extends StatelessWidget {
                                 borderRadius: BorderRadiusStyle.roundedBorder10,
                               ),
                               child: Stack(
+                                alignment: Alignment.center,
                                 children: [
                                   CustomImageView(
                                     svgPath: ImageConstant
                                         .imgUitcalenderDeepOrange300,
-                                    height: 10,
-                                    width: 10,
                                     alignment: Alignment.bottomRight,
                                   ),
                                 ],
@@ -248,7 +248,7 @@ class AddTaskWidget extends StatelessWidget {
                     top: 12,
                     bottom: 5,
                   ),
-                  child: Progress(progress: 60),
+                  child: Progress(progress: progress),
                 ),
               ],
             ),
