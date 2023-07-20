@@ -23,13 +23,14 @@ App Code Structure
 
 App Library Dependence
 
-> image_pciker
+> [image_pciker](https://pub.dev/packages/image_picker)
 
-- [A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures with the camera.]([https://pub.dev/packages/url_launcher](https://pub.dev/packages/image_picker))
+- A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures.
 
-> local_auth
+> [local_auth]()
 
-- [This Flutter plugin provides means to perform local, on-device authentication of the user.](https://pub.dev/packages/url_launcher](https://pub.dev/packages/local_auth))
+- This Flutter plugin provides means to perform local, on-device authentication of the user.
+
 ...
 
 #### App APK Link
