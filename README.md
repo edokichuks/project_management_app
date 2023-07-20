@@ -23,21 +23,18 @@ App Code Structure
 
 App Library Dependence
 
-> url_launcher
+> image_pciker
 
 - [Flutter plugin for launching a URL. ](https://pub.dev/packages/url_launcher)
 
-Features To Further Implement
-> Properly follow MVVM design pattern
-> 
-> Properly refactor the codebase. Singularity of function (seperation of concerns)
-> 
-> Handle localization 
-> 
+> local_auth
+
+- [Flutter plugin for launching a URL. ](https://pub.dev/packages/url_launcher)
+
 
 #### App APK Link
 
-- [My resume app ](https://drive.google.com/file/d/1rijHa96TzkP9nVJpWvY6DINNkFrVKe3g/view?usp=drivesdk)
+- [DO-IT](https://drive.google.com/file/d/1rijHa96TzkP9nVJpWvY6DINNkFrVKe3g/view?usp=drivesdk)
 
 Challenges Faced
 
