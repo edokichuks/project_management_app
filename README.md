@@ -29,7 +29,7 @@ App Library Dependence
 
 > local_auth
 
-- [This Flutter plugin provides means to perform local, on-device authentication of the user.]([https://pub.dev/packages/url_launcher](https://pub.dev/packages/local_auth))
+- [This Flutter plugin provides means to perform local, on-device authentication of the user.](https://pub.dev/packages/url_launcher](https://pub.dev/packages/local_auth))
 ...
 
 #### App APK Link
