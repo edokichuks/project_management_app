@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
-import 'package:project_management_app/src/general_widgets/spacing.dart';
+import 'package:do_it/src/core/app_export.dart';
+import 'package:do_it/src/general_widgets/custom_image_view.dart';
+import 'package:do_it/src/general_widgets/spacing.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({

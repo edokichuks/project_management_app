@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/general_widgets/general_widgets_exports.dart';
+import 'package:do_it/src/core/app_export.dart';
+import 'package:do_it/src/general_widgets/general_widgets_exports.dart';
 
 class NameInput extends StatelessWidget {
   const NameInput({
-    super.key, required this.hintText,
+    super.key,
+    required this.hintText,
   });
   final String hintText;
 

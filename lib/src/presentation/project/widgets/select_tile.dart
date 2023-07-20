@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project_management_app/src/core/app_export.dart';
+import 'package:do_it/src/core/app_export.dart';
 
 class SelectTile extends StatelessWidget {
   const SelectTile({

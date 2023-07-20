@@ -2,10 +2,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/core/services/third_party_services/image_picker_services.dart';
-import 'package:project_management_app/src/general_widgets/app_bottom_sheet.dart';
-import 'package:project_management_app/src/presentation/project/widgets/select_tile.dart';
+import 'package:do_it/src/core/app_export.dart';
+import 'package:do_it/src/core/services/third_party_services/image_picker_services.dart';
+import 'package:do_it/src/general_widgets/app_bottom_sheet.dart';
+import 'package:do_it/src/presentation/project/widgets/select_tile.dart';
 
 import '../../../general_widgets/general_widgets_exports.dart';
 

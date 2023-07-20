@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/general_widgets/back_button.dart';
-import 'package:project_management_app/src/general_widgets/custom_elevated_button.dart';
-import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
-import 'package:project_management_app/src/general_widgets/custom_text_form_field.dart';
-import 'package:project_management_app/src/general_widgets/spacing.dart';
+import 'package:do_it/src/core/app_export.dart';
+import 'package:do_it/src/general_widgets/back_button.dart';
+import 'package:do_it/src/general_widgets/custom_elevated_button.dart';
+import 'package:do_it/src/general_widgets/custom_image_view.dart';
+import 'package:do_it/src/general_widgets/custom_text_form_field.dart';
+import 'package:do_it/src/general_widgets/spacing.dart';
 
 // ignore_for_file: must_be_immutable
 class CreateAccount extends StatelessWidget {
@@ -15,8 +15,6 @@ class CreateAccount extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
 
   TextEditingController passwordController = TextEditingController();
-
-  
 
   @override
   Widget build(BuildContext context) {
@@ -123,8 +121,8 @@ class CreateAccount extends StatelessWidget {
                   CustomTextFormField(
                       controller: passwordController,
                       margin: getMargin(left: 1, top: 24),
-                      contentPadding: const EdgeInsets.only(
-                          left: 24, top: 19, bottom: 19),
+                      contentPadding:
+                          const EdgeInsets.only(left: 24, top: 19, bottom: 19),
                       textStyle: TextThemeHelper.bodyMediumSFProTextGray700,
                       hintText: "Password",
                       textInputAction: TextInputAction.done,

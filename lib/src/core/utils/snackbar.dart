@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-
-
+import 'package:do_it/src/core/app_export.dart';
 
 toastMessage(String text, {bool long = false, Color? color}) {
   Fluttertoast.showToast(
@@ -13,5 +11,3 @@ toastMessage(String text, {bool long = false, Color? color}) {
       gravity: ToastGravity.BOTTOM,
       textColor: Colors.white);
 }
-
-

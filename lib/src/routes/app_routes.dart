@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:project_management_app/src/routes/routes_exports.dart';
+import 'package:do_it/src/routes/routes_exports.dart';
 
 class AppRoutes {
   const AppRoutes._();
@@ -48,11 +48,11 @@ class AppRoutes {
         );
       case kAddTaskScreen:
         return CupertinoPageRoute(
-          builder: (context) =>  AddTaskScreen(),
+          builder: (context) => AddTaskScreen(),
         );
       case kEditTaskScreen:
         return CupertinoPageRoute(
-          builder: (context) =>  EditTaskScreen(),
+          builder: (context) => EditTaskScreen(),
         );
       default:
         throw UnimplementedError('Route not found');

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-
-
+import 'package:do_it/src/core/app_export.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,10 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          fontFamily: 'Inter',
+          fontFamily: 'Mark Pro',
           scaffoldBackgroundColor: Colors.white,
           textTheme: Theme.of(context).textTheme.apply(
-                fontFamily: 'Inter',
+                fontFamily: 'Mark Pro',
               ),
           colorScheme: theme.colorScheme),
       title: 'project_maanagement_app',

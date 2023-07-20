@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/presentation/project/widgets/project_divider.dart';
-import 'package:project_management_app/src/general_widgets/general_widgets_exports.dart';
+import 'package:do_it/src/core/app_export.dart';
+import 'package:do_it/src/presentation/project/widgets/project_divider.dart';
+import 'package:do_it/src/general_widgets/general_widgets_exports.dart';
 
 class ProjectDates extends StatelessWidget {
   const ProjectDates({

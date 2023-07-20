@@ -1,20 +1,20 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/presentation/home/model/home_container_model.dart';
-import 'package:project_management_app/src/presentation/home/widgets/add_task_widget.dart';
-import 'package:project_management_app/src/presentation/home/widgets/home_container.dart';
-import 'package:project_management_app/src/general_widgets/app_bar/custom_app_bar.dart';
-import 'package:project_management_app/src/general_widgets/custom_icon_button.dart';
-import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
+import 'package:do_it/src/core/app_export.dart';
+import 'package:do_it/src/presentation/home/model/home_container_model.dart';
+import 'package:do_it/src/presentation/home/widgets/add_task_widget.dart';
+import 'package:do_it/src/presentation/home/widgets/home_container.dart';
+import 'package:do_it/src/general_widgets/app_bar/custom_app_bar.dart';
+import 'package:do_it/src/general_widgets/custom_icon_button.dart';
+import 'package:do_it/src/general_widgets/custom_image_view.dart';
 
-import 'package:project_management_app/src/general_widgets/spacing.dart';
+import 'package:do_it/src/general_widgets/spacing.dart';
 
 class HomeScreen extends StatelessWidget {
-   HomeScreen({super.key});
+  HomeScreen({super.key});
 
-List<double> rand = [];
+  List<double> rand = [];
   @override
   Widget build(BuildContext context) {
     getrandNum();
@@ -154,7 +154,9 @@ List<double> rand = [];
                     itemCount: 6,
                     itemBuilder: (context, index) {
                       final randomProgress = rand[index];
-                      return  AddTaskWidget(progress: randomProgress ,);
+                      return AddTaskWidget(
+                        progress: randomProgress,
+                      );
                     },
                   ),
                 ),
@@ -166,7 +168,8 @@ List<double> rand = [];
       ),
     );
   }
-    void getrandNum() {
+
+  void getrandNum() {
     for (int x = 0; x < 6; x++) {
       double random = Random().nextDouble() * 100;
       rand.add(random);

@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/presentation/home/widgets/add_task_widget.dart';
-import 'package:project_management_app/src/general_widgets/back_button.dart';
-import 'package:project_management_app/src/general_widgets/spacing.dart';
+import 'package:do_it/src/core/app_export.dart';
+import 'package:do_it/src/presentation/home/widgets/add_task_widget.dart';
+import 'package:do_it/src/general_widgets/back_button.dart';
+import 'package:do_it/src/general_widgets/spacing.dart';
 
 class TaskScreen extends StatelessWidget {
   TaskScreen({super.key});
@@ -18,7 +18,7 @@ class TaskScreen extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.medium),
+          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.big),
           children: [
             const Spacing.mediumHeight(),
             const Align(

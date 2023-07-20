@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:project_management_app/src/core/app_export.dart';
+import 'package:do_it/src/core/app_export.dart';
 
 class AppDecoration {
   static BoxDecoration get fill => BoxDecoration(

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/core/services/third_party_services/local_auth_finger.dart';
-import 'package:project_management_app/src/core/utils/snackbar.dart';
-import 'package:project_management_app/src/general_widgets/app_logo.dart';
-import 'package:project_management_app/src/general_widgets/back_button.dart';
-import 'package:project_management_app/src/general_widgets/custom_elevated_button.dart';
-import 'package:project_management_app/src/general_widgets/custom_icon_button.dart';
-import 'package:project_management_app/src/general_widgets/custom_image_view.dart';
-import 'package:project_management_app/src/general_widgets/custom_text_form_field.dart';
-import 'package:project_management_app/src/general_widgets/spacing.dart';
+import 'package:do_it/src/core/app_export.dart';
+import 'package:do_it/src/core/services/third_party_services/local_auth_finger.dart';
+import 'package:do_it/src/core/utils/snackbar.dart';
+import 'package:do_it/src/general_widgets/app_logo.dart';
+import 'package:do_it/src/general_widgets/back_button.dart';
+import 'package:do_it/src/general_widgets/custom_elevated_button.dart';
+import 'package:do_it/src/general_widgets/custom_icon_button.dart';
+import 'package:do_it/src/general_widgets/custom_image_view.dart';
+import 'package:do_it/src/general_widgets/custom_text_form_field.dart';
+import 'package:do_it/src/general_widgets/spacing.dart';
 
 // ignore_for_file: must_be_immutable
 class LoginScreen extends StatefulWidget {
@@ -94,10 +94,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           flex: 6,
                           child: CustomElevatedButton(
                               text: "Sign in",
-                              onTap: (){ 
-                            
+                              onTap: () {
                                 Navigator.pushNamed(
-                                  context, AppRoutes.kDashboard);},
+                                    context, AppRoutes.kDashboard);
+                              },
                               margin: const EdgeInsets.only(top: 1),
                               buttonStyle: ButtonThemeHelper.fillPrimary
                                   .copyWith(
@@ -118,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 setState(() {
                                   authenticated = auth;
                                 });
-                                  if (authenticated) {
+                                if (authenticated) {
                                   toastMessage(
                                       'Authenticated With Fingerprint');
                                   Navigator.pushNamed(

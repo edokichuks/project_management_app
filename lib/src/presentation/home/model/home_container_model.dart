@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/utils/image_constant.dart';
+import 'package:do_it/src/core/utils/image_constant.dart';
 
 import '../../../core/app_export.dart';
 

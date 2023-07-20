@@ -1,4 +1,4 @@
-package com.example.project_management_app
+package com.example.do_it
 import io.flutter.embedding.android.FlutterFragmentActivity
 import io.flutter.embedding.android.FlutterActivity
 
