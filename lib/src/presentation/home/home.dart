@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/core/utils/app_dimensions.dart';
-import 'package:project_management_app/src/core/utils/image_constant.dart';
-import 'package:project_management_app/src/core/utils/size_utils.dart';
 import 'package:project_management_app/src/presentation/home/model/home_container_model.dart';
 import 'package:project_management_app/src/presentation/home/widgets/add_task_widget.dart';
 import 'package:project_management_app/src/presentation/home/widgets/home_container.dart';
 import 'package:project_management_app/src/widgets/app_bar/custom_app_bar.dart';
 import 'package:project_management_app/src/widgets/custom_icon_button.dart';
 import 'package:project_management_app/src/widgets/custom_image_view.dart';
-import 'package:project_management_app/src/widgets/custom_painters/progess.dart';
+
 import 'package:project_management_app/src/widgets/spacing.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -80,10 +77,7 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
-          const Spacing.mediumHeight(),
-          const Spacing.mediumHeight(),
-          const Spacing.mediumHeight(),
-          Progress(progress: 60),
+          const Spacing.smallHeight(),
           GridView.builder(
             physics: const BouncingScrollPhysics(),
             padding:
@@ -104,24 +98,58 @@ class HomeScreen extends StatelessWidget {
           ),
           const Spacing.bigHeight(),
           Container(
-            color: Color(0XFFF8F8F8),
+            color: const Color(0XFFF8F8F8),
             width: MediaQuery.sizeOf(context).width,
             child: Column(
               children: [
-                Text('Hello'),
                 Padding(
-                  padding: getPadding(top: 13),
+                  padding: getPadding(
+                    left: 24,
+                    top: 21,
+                    right: 24,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Task in Progress",
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.left,
+                        style: TextThemeHelper.titleMediumBlack900,
+                      ),
+                      GestureDetector(
+                        onTap: () =>
+                            Navigator.pushNamed(context, AppRoutes.kTaskScreen),
+                        child: Padding(
+                          padding: getPadding(
+                            bottom: 3,
+                          ),
+                          child: Text(
+                            "See all",
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.left,
+                            style: TextThemeHelper.titleSmallOnError,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: getPadding(
+                    top: 13,
+                  ),
                   child: ListView.separated(
                     physics: const BouncingScrollPhysics(),
                     padding: const EdgeInsets.symmetric(
-                        horizontal: AppDimensions.medium),
+                        horizontal: AppDimensions.big),
                     shrinkWrap: true,
                     separatorBuilder: (context, index) {
-                      return SizedBox(height: 8);
+                      return const SizedBox(height: AppDimensions.medium);
                     },
                     itemCount: 4,
                     itemBuilder: (context, index) {
-                      return AddTaskWidget();
+                      return const AddTaskWidget();
                     },
                   ),
                 ),

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project_management_app/src/core/app_export.dart';
-import 'package:project_management_app/src/core/utils/app_dimensions.dart';
-import 'package:project_management_app/src/core/utils/image_constant.dart';
-import 'package:project_management_app/src/core/utils/size_utils.dart';
 import 'package:project_management_app/src/presentation/home/model/home_container_model.dart';
 import 'package:project_management_app/src/widgets/custom_icon_button.dart';
 import 'package:project_management_app/src/widgets/custom_image_view.dart';

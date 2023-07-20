@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_management_app/src/core/utils/app_dimensions.dart';
 import 'package:project_management_app/src/presentation/home/home.dart';
 import 'package:project_management_app/src/presentation/todo_screen.dart';
 import 'package:project_management_app/src/widgets/custom_image_view.dart';
-
+import 'package:project_management_app/src/routes/routes_exports.dart';
 import '../../core/app_export.dart';
 
 class Dashboard extends StatefulWidget {
@@ -22,12 +21,10 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
-        children: const [
-          HomeScreen(),
-          Center(
-            child: Text('Task'),
-          ),
-          TodoScreen(),
+        children:  [
+          const HomeScreen(),
+       CreateProjectScreen(),
+         const TodoScreen(),
         ],
       ),
       floatingActionButton: _currentIndex == 0
@@ -160,7 +157,7 @@ class CustomNavigationBarItem {
   final Widget? activeIcon;
   final String tooltipText;
 }
-
+     
 class _Tile extends StatelessWidget {
   const _Tile({
     required this.icon,

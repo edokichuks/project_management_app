@@ -64,6 +64,7 @@ class AddTaskWidget extends StatelessWidget {
                   ),
                   decoration: AppDecoration.txtFill2.copyWith(
                     borderRadius: BorderRadiusStyle.txtRoundedBorder2,
+                    color: theme.colorScheme.onError,
                   ),
                   child: Text(
                     "4d",
@@ -248,7 +249,6 @@ class AddTaskWidget extends StatelessWidget {
                     bottom: 5,
                   ),
                   child: Progress(progress: 60),
-                 
                 ),
               ],
             ),

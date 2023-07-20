@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 
-EdgeInsetsGeometry getMarginOrPadding({
+double getSize(double px) {
+  return px;
+}
+
+double getVerticalSize( double px) {
+  return px;
+}
+
+double getHorizontalSize(double px) {
+  return px;
+}
+
+EdgeInsets getMarginOrPadding({
   double? all,
   double? left,
   double? top,
@@ -24,7 +36,7 @@ EdgeInsetsGeometry getMarginOrPadding({
 double getScreenWidth(BuildContext context) =>
     MediaQuery.of(context).size.width;
 
-EdgeInsetsGeometry getMargin({
+EdgeInsets getMargin({
   double? all,
   double? left,
   double? top,
@@ -40,7 +52,7 @@ EdgeInsetsGeometry getMargin({
   );
 }
 
-EdgeInsetsGeometry getPadding({
+EdgeInsets getPadding({
   double? all,
   double? left,
   double? top,

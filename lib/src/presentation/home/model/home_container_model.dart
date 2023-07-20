@@ -35,7 +35,7 @@ List<HomeContainerModel> dummyData = [
       text: 'Completed Task',
       itemsNum: '20',
       containerColor: appTheme.green50,
-      imagePath: ImageConstant.imgCheckmarkOnerrorcontainer,
+      imagePath: 'assets/images/svg/check_mark.svg',
       checkColor: const Color(0XFF12B76A)),
   HomeContainerModel(
       text: 'Overdue Task',
