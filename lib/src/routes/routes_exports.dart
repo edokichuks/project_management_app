@@ -5,3 +5,5 @@ export 'package:project_management_app/src/presentation/dashboard/dashboard.dart
 export 'package:project_management_app/src/presentation/project/create_project_screen.dart';
 export 'package:project_management_app/src/presentation/task/pages/tasks_screen.dart';
 export 'package:project_management_app/src/presentation/project/project_screen.dart';
+export 'package:project_management_app/src/presentation/task/pages/add_task_screen.dart';
+export 'package:project_management_app/src/presentation/task/pages/edit_task.dart';

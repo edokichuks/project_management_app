@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../theme/text_theme_helper.dart';
 import '../theme/theme_helper.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  CustomTextFormField({
+  const CustomTextFormField({
     Key? key,
     this.alignment,
     this.width,
@@ -14,7 +12,7 @@ class CustomTextFormField extends StatelessWidget {
     this.autofocus = false,
     this.textStyle,
     this.obscureText = false,
-    this.textInputAction = TextInputAction.next,
+    this.textInputAction = TextInputAction.done,
     this.textInputType = TextInputType.text,
     this.maxLines,
     this.hintText,

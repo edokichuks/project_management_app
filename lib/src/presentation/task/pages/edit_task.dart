@@ -1,24 +1,19 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:project_management_app/src/presentation/project/widgets/select_image.dart';
 import 'package:project_management_app/src/presentation/project/widgets/widgets_exports.dart';
 import 'package:project_management_app/src/general_widgets/general_widgets_exports.dart';
 import 'package:project_management_app/src/core/app_export.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:project_management_app/src/presentation/task/widgets/progress_rate.dart';
 
-class CreateProjectScreen extends HookConsumerWidget {
-  CreateProjectScreen({Key? key}) : super(key: key);
-
-  TextEditingController enddateController = TextEditingController();
-
-  TextEditingController enddateoneController = TextEditingController();
+class EditTaskScreen extends HookConsumerWidget {
+  const EditTaskScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, ref) {
     ValueNotifier<String> createdFrom = useState('');
     ValueNotifier<String> endTo = useState('');
-    ValueNotifier<List<File>> images = useState([]);
+
     final size = MediaQuery.sizeOf(context);
     return SafeArea(
       child: Scaffold(
@@ -28,35 +23,34 @@ class CreateProjectScreen extends HookConsumerWidget {
             padding: const EdgeInsets.symmetric(horizontal: AppDimensions.big),
             children: [
               const Spacing.mediumHeight(),
-              const Align(
-                  alignment: Alignment.centerLeft, child: BackButtonWidget()),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Align(
+                      alignment: Alignment.centerLeft,
+                      child: BackButtonWidget()),
+                  PopupMenuButton<String>(
+                      initialValue: '',
+                      itemBuilder: (context) => <PopupMenuEntry<String>>[
+                            const PopupMenuItem(
+                              value: '',
+                              child: ProgessRate(),
+                            )
+                          ]),
+                ],
+              ),
               Padding(
                   padding: getPadding(left: 2, top: 23),
-                  child: Text("Create Project",
+                  child: Text("Edit Task",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: theme.textTheme.headlineSmall)),
               Padding(
                   padding: getPadding(left: 3, top: 17, right: 2),
-                  child: Row(children: [
-                    CustomImageView(
-                        onTap: () => SelectImage.chooseImage(
-                            context: context,
-                            imageList: images,
-                            type: ImageType.single),
-                        imagePath: images.value.isEmpty
-                            ? ImageConstant.imgEllipse546
-                            : null,
-                        file: images.value.isEmpty ? null : images.value.last,
-                        height: getSize(52),
-                        width: getSize(52),
-                        radius: BorderRadius.circular(getHorizontalSize(26))),
-                    const Spacing.mediumWidth(),
-                    const NameInput(
-                      hintText: 'Project Name',
-                    )
-                  ])),
-              const Spacing.height(49),
+                  child: const NameInput(
+                    hintText: 'Task Name',
+                  )),
+              const Spacing.height(40),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.min,
@@ -93,11 +87,12 @@ class CreateProjectScreen extends HookConsumerWidget {
               const Spacing.smallHeight(),
               CustomTextFormField(
                 maxLines: 4,
+                
               ),
               CustomElevatedButton(
-                  text: "Create Project",
+                  text: "Save",
                   onTap: () =>
-                      Navigator.pushNamed(context, AppRoutes.kProjectScreen),
+                      Navigator.pushNamed(context, AppRoutes.kTaskScreen),
                   margin: getMargin(left: 2, top: 19, bottom: 5),
                   buttonStyle: ButtonThemeHelper.fillPrimary.copyWith(
                       fixedSize: MaterialStateProperty.all<Size>(
